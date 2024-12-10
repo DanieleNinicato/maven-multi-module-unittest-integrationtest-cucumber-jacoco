@@ -18,6 +18,7 @@
     <name>maven-multi-module-unittest-integrationtest-cucumber-jacoco</name>
     <modules>
         <module>mircoservice1</module>
+        <module>mircoservice2</module>
     </modules>
 
     <properties>

@@ -1,0 +1,8 @@
+server:
+  port: 8081
+  servlet:
+    contextPath: /service1
+
+spring:
+  application:
+    name: service1

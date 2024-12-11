@@ -22,7 +22,7 @@
         <!-- sonar properties -->
         <sonar.projectName>mircoservice1</sonar.projectName>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.token>squ_c36dac0689714a3220763ccbe2af2bae4c18dce8</sonar.token>
+        <sonar.token>${sonar.token}</sonar.token>
         <sonar.language>java</sonar.language>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>

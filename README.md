@@ -47,3 +47,26 @@ Before running the project, ensure you have the following installed:
 ```bash
 git clone https://github.com/DanieleNinicato/maven-multi-module-unittest-integrationtest-cucumber-jacoco.git
 cd maven-multi-module-unittest-integrationtest-cucumber-jacoco
+```
+
+###  Step 2: Build and Test
+Run the Maven command to build all modules and execute tests:
+
+```bash
+mvn clean package
+```
+
+### Step 3: Generate Coverage Report
+To generate the combined JaCoCo coverage report:
+
+```bash
+mvn verify
+```
+Reports will be available in the target/site/jacoco-aggregate directory.
+
+### Step 4: Push to Sonar
+Configure your sonar-project.properties file or pass Sonar configuration parameters via the command line, then run:
+
+```bash
+mvn sonar:sonar
+```

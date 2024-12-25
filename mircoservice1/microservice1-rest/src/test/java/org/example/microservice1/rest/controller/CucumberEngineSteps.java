@@ -2,20 +2,25 @@ package org.example.microservice1.rest.controller;
 
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
-import org.example.microservice1.Microservice1Application;
 import org.example.microservice1.business.service.Service1;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.http.HttpStatus;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @CucumberContextConfiguration()
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = {Microservice1Application.class})
-public class CucumberEngineSteps {
+public class CucumberEngineSteps extends AbstractControllerTest {
+
     @Autowired
     private Service1 service1;
 
-    @When("call service1 POST cucumber")
-    public void call_service1_POST_cucumber() {
-        service1.microservice1CucumberIntegration();
+    @When("call service1 controllerMethod cucumber")
+    public void call_service1_controllerMethod_cucumber() throws Exception {
+        var resultActions = post("/api/service1/cucumber", HttpStatus.OK);
+        resultActions.andExpect(MockMvcResultMatchers.status().isOk());
+    }
+
+    @When("call service1 serviceMethod cucumber")
+    public void call_service1_serviceMethod_cucumber() {
+        service1.microservice1Cucumber();
     }
 }

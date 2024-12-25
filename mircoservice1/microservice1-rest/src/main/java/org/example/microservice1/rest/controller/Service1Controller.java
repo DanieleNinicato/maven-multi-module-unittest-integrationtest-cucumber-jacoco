@@ -17,4 +17,9 @@ public class Service1Controller {
     public String service1Integration() {
         return service1.microservice1Integration();
     }
+
+    @PostMapping("/cucumber")
+    public String serviceIntegrationCucumber() {
+        return service1.microservice1CucumberIntegration();
+    }
 }

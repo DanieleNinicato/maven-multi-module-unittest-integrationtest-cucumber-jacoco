@@ -27,10 +27,18 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
 
-        <junit.platform.suite.version>1.11.3</junit.platform.suite.version>
+        <!-- sonar properties -->
+        <sonar.projectName>Maven multi module</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.token>squ_79278aa7c74f88457e792e8edb39dc5ac22754ee</sonar.token>
+        <sonar.language>java</sonar.language>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 
+        <junit.platform.suite.version>1.11.3</junit.platform.suite.version>
         <cucumber.version>6.11.0</cucumber.version>
         <cucumber.reporting.version>5.8.4</cucumber.reporting.version>
+        <sonar-maven-plugin.version>5.0.0.4389</sonar-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -82,6 +90,11 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar-maven-plugin.version}</version>
             </plugin>
         </plugins>
     </build>

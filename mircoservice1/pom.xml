@@ -19,13 +19,6 @@
     </modules>
 
     <properties>
-        <!-- sonar properties -->
-        <sonar.projectName>mircoservice1</sonar.projectName>
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.token>${sonar.token}</sonar.token>
-        <sonar.language>java</sonar.language>
-        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.basedir}\microservice1-jacoco\target\site\jacoco-aggregate\jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
@@ -78,11 +71,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>5.0.0.4389</version>
             </plugin>
         </plugins>
     </build>

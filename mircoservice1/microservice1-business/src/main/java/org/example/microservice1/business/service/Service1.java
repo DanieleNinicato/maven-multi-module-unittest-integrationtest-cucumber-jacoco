@@ -14,6 +14,10 @@ public class Service1 {
         return "Microservice1 integration";
     }
 
+    public String microservice1Cucumber() {
+        return "Microservice1 cucumber";
+    }
+
     public String microservice1CucumberIntegration() {
         return "Microservice1 cucumber integration";
     }

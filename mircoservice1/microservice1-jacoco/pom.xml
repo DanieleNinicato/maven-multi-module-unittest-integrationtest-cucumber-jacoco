@@ -16,6 +16,7 @@
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.basedir}\target\site\jacoco-aggregate\jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.skip>true</sonar.skip>
     </properties>
 
     <dependencies>
